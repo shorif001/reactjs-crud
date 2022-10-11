@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: green;
+}
+
+.logo img {
+  width: 80px;
+  height: 70px;
+}
+
+.navbar-field {
+  margin: 10px 0px;
+}
+
+.navbar-field a {
+  padding: 5px;
+  text-decoration: none;
+  color: #fff;
+}
