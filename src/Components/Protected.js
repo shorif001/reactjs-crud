@@ -3,7 +3,7 @@ import { Redirect} from 'react-router-dom'
 
 const Protected = ({isLoggedIn, children}) => {
   if(!isLoggedIn){
-    return isLoggedIn ? <Redirect to="/" replace/> : <Redirect to="/content"/>
+    return isLoggedIn ?  <Redirect to="/content"/> : <Redirect to="/" replace/>
 
   }
   return children;

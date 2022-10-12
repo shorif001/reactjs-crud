@@ -29,10 +29,10 @@ function App() {
         <Route path="/update" component={UserUpdate} />
 
         <Route element={
-        <Protected isLoggedIn={true}>
+          <Protected isLoggedIn={false}>
           <Route path="/content" element={<Content/>}/>
         </Protected>} />
-        <Route path="/*" component={Error} />
+          <Route path="/*" component={Error} />
       </Switch>
     </BrowserRouter>
   );
