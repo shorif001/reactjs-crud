@@ -2,6 +2,7 @@
 import './App.css';
 import About from './Components/About/About';
 import Content from './Components/Content/Content';
+import Error from './Components/Error';
 import Login from './Components/Login/Login';
 import Navbar from './Components/Navbar/Navbar';
 import UserList from './Components/UserList/UserList';
@@ -18,6 +19,7 @@ function App() {
       <Route  path="/content" component={Content} />
       <Route  path="/userlist" component={UserList} />
       <Route  path="/update" component={UserUpdate} />
+      <Route component={Error} />
     </Switch>
     </BrowserRouter>
   );
