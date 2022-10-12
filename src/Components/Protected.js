@@ -5,7 +5,6 @@ const Protected = ({isLoggedIn, children}) => {
   if(!isLoggedIn){
     return <Redirect to="/" replace/>
 
-    // <Navigate to="/" replace/>
   }
   return children;
 }
