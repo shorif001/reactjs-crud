@@ -11,7 +11,7 @@ const Navbar = () => {
           <img src={logo} alt="" />
         </div>
         <div className="navbar-field">
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/">Login</NavLink>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/content">Content</NavLink>
           <NavLink to="/userlist">User List</NavLink>

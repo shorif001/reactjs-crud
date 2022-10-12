@@ -2,7 +2,7 @@
 import './App.css';
 import About from './Components/About/About';
 import Content from './Components/Content/Content';
-import Home from './Components/Home/Home';
+import Login from './Components/Login/Login';
 import Navbar from './Components/Navbar/Navbar';
 import UserList from './Components/UserList/UserList';
 import UserUpdate from './Components/UserUpdate/UpdateUser';
@@ -13,7 +13,7 @@ function App() {
     <>
     <Navbar/>
     <Switch>
-      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={Login} />
       <Route  path="/about" component={About} />
       <Route  path="/content" component={Content} />
       <Route  path="/userlist" component={UserList} />
