@@ -1,4 +1,4 @@
- import { useState } from 'react';
+import { useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import About from './Components/About/About';
@@ -17,18 +17,23 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <BrowserRouter>
-    <Navbar/>
-    {isLoggedIn ? <button onClick={()=>{setIsLoggedIn(!isLoggedIn)}}>Log Out</button> : <button onClick={()=>{setIsLoggedIn(!isLoggedIn)}}>Log In</button>}
-    <Switch>
-      <Route exact path="/" component={Login} />
-      <Route  path="/about" component={About} />
-      <Route  path="/content" component={<Protected isLoggedIn={isLoggedIn}>
-        <Content/>
-      </Protected>} />
-      <Route  path="/userlist" component={UserList} />
-      <Route  path="/update" component={UserUpdate} />
-      <Route component={Error} />
-    </Switch>
+      <Navbar />
+      {isLoggedIn ? <button onClick={() => { setIsLoggedIn(!isLoggedIn) }}>Log Out</button> : <button onClick={() => { setIsLoggedIn(!isLoggedIn) }}>Log In</button>}
+      <Switch>
+        <Route exact path="/" component={Login} />
+        <Route path="/about" component={About} />
+
+
+
+        <Route path="/userlist" component={UserList} />
+        <Route path="/update" component={UserUpdate} />
+
+        <Route element={
+        <Protected isLoggedIn={true}>
+          <Route path="/content" element={<Content/>}/>
+        </Protected>} />
+        <Route path="/*" component={Error} />
+      </Switch>
     </BrowserRouter>
   );
 }
