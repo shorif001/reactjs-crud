@@ -1,4 +1,4 @@
- import { Route, Switch } from 'react-router-dom';
+ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import About from './Components/About/About';
 import Content from './Components/Content/Content';
@@ -10,7 +10,7 @@ import UserUpdate from './Components/UserUpdate/UpdateUser';
 // https://www.youtube.com/watch?v=HPBuLS04ojE
 function App() {
   return (
-    <>
+    <BrowserRouter>
     <Navbar/>
     <Switch>
       <Route exact path="/" component={Login} />
@@ -19,7 +19,7 @@ function App() {
       <Route  path="/userlist" component={UserList} />
       <Route  path="/update" component={UserUpdate} />
     </Switch>
-    </>
+    </BrowserRouter>
   );
 }
 

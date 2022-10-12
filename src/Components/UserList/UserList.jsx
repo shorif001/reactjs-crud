@@ -1,11 +1,11 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 
 
 const UserList = () => {
-  const history = useHistory();
+  // const history = useHistory();
 
   const [apiData, setapiData] = useState([]);
   useEffect(() => {
